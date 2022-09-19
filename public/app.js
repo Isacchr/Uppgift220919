@@ -13,3 +13,13 @@ function primtalLista() {
 
 }
 
+function primtalPosition() {
+
+    var txtBoxValue = document.getElementById('nrInputPrimtal').value;
+    const primtalArray = new Array(2,3,5,7,11);
+
+    txtBoxValue -= 1;
+
+    console.log(primtalArray[txtBoxValue]);
+}
+
