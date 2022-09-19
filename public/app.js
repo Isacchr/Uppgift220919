@@ -31,9 +31,51 @@ function primtalPosition() {
 
 }
 
+function FibonacciNr() {
+
+    var txtBoxValue = document.getElementById('nrFibonacciInput').value;
+    const FibonacciSeqNr = document.getElementById('nrFibonacci');
+
+    var Fsumman = [1,1];
+
+   if ( txtBoxValue == 1) {
+        Fsumman = [1];
+   }
+   if ( txtBoxValue == 2) {
+        Fsumman = [1,1];
+   }
+
+    for ( var i=2; i < txtBoxValue; i++) {
+
+        Fsumman[i]= Fsumman[i-1]+ Fsumman[i-2];
+    }
+
+    FibonacciSeqNr.innerHTML = "Det " + txtBoxValue + ":e numret i fibonacci sekvensen är: ";
+
+    txtBoxValue -= 1;
+    FibonacciSeqNr.innerHTML += Fsumman[txtBoxValue];
+
+}
+
 function FibonacciSeq() {
 
-    var txtBoxValue = document.getElementById('nrFibonacci').value;
-    
+    var txtBoxValue = document.getElementById('nrFibonacciSeqInput').value;
+    const FibonacciSeqList = document.getElementById('nrFibonacciSeq');
+
+    var Fsumman = [0,1];
+
+   if ( txtBoxValue == 1) {
+        Fsumman = [1];
+        FibonacciSeqList.innerHTML = "Det första talet i fibonacci sekvensen är: ";
+   }
+
+    for ( var i=2; i <= txtBoxValue; i++) {
+
+        Fsumman[+i] = Fsumman[i-1] + Fsumman[i-2];    
+        FibonacciSeqList.innerHTML = "De första " + txtBoxValue + " numrena i fibonacci sekvensen är: ";
+    }
+
+
+    FibonacciSeqList.innerHTML += Fsumman;
 
 }
