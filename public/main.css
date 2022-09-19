@@ -5,3 +5,13 @@ body {
 p {
     font-size: 20px;
 }
+
+#PrimtalDiv {
+    border: 1px solid black;
+    padding: 20px;
+}
+
+#FibonacciDiv {
+    border: 1px solid black;
+    padding: 20px;
+}

@@ -23,11 +23,17 @@ function primtalPosition() {
 
     const textParagraph = document.getElementById('primtalPositionText');
 
-    txtBoxValue -= 1;
+    textParagraph.innerHTML = "Det " + txtBoxValue + ":e primtalet är: ";
 
-    textParagraph.innerHTML = "Det " + txtBoxValue + " primtalet är: ";
+    txtBoxValue -= 1;
 
     textParagraph.innerHTML += primtalArray[txtBoxValue];
 
 }
 
+function FibonacciSeq() {
+
+    var txtBoxValue = document.getElementById('nrFibonacci').value;
+    
+
+}
