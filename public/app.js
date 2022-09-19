@@ -62,14 +62,19 @@ function FibonacciSeq() {
     var txtBoxValue = document.getElementById('nrFibonacciSeqInput').value;
     const FibonacciSeqList = document.getElementById('nrFibonacciSeq');
 
-    var Fsumman = [0,1];
+    var Fsumman = [1,1];
 
    if ( txtBoxValue == 1) {
         Fsumman = [1];
         FibonacciSeqList.innerHTML = "Det första talet i fibonacci sekvensen är: ";
    }
 
-    for ( var i=2; i <= txtBoxValue; i++) {
+   if ( txtBoxValue == 2) {
+    Fsumman = [1,1]; 
+    FibonacciSeqList.innerHTML = "De första " + txtBoxValue + " numrena i fibonacci sekvensen är: ";
+   }
+
+    for ( var i=2; i < txtBoxValue; i++) {
 
         Fsumman[+i] = Fsumman[i-1] + Fsumman[i-2];    
         FibonacciSeqList.innerHTML = "De första " + txtBoxValue + " numrena i fibonacci sekvensen är: ";
