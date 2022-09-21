@@ -76,7 +76,7 @@ function FibonacciSeq() {
 
     for ( var i=2; i < txtBoxValue; i++) {
 
-        Fsumman[+i] = Fsumman[i-1] + Fsumman[i-2];    
+        Fsumman[i] = Fsumman[i-1] + Fsumman[i-2];    
         FibonacciSeqList.innerHTML = "De första " + txtBoxValue + " numrena i fibonacci sekvensen är: ";
     }
 
